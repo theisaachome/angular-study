@@ -1,0 +1,33 @@
+ <div class="segment">
+  <h2>My BirthDay</h2>
+  <p>
+   {{birthday | date}}
+  </p>
+  <p>
+   {{birthday | date:'MMMM d y'}}
+  </p><h2>My BirthDay</h2>
+  <p>
+   {{birthday | date}}
+  </p>
+  <p>
+   {{birthday | date:'MMMM d y'}}
+  </p>
+ </div>
+
+ <div class="segment">
+  <h2>Online Class</h2>
+  <p>Start On : {{startDate | date:'longDate'}}</p>
+  <p>End On : {{endDate | date:'longDate'}}</p>
+  <p>Course Duration : {{duration|date:'ww'}} Weeks</p>
+ 
+ </div>
+
+  <div class="segment">
+  <h3 >{{'Online Class Start On'| uppercase}}</h3>
+  <div class="date">
+  {{startDate| date: format}}
+  </div>
+  <div>
+  <button class="btn" (click)="onChangeFormat()">Change Format</button>
+  </div>
+  </div>
