@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { PipeDateComponent } from './pipe-date/pipe-date.component';
 import { PowerAndExponentComponent } from './power-and-exponent/power-and-exponent.component';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import { LeaderPipe } from './leader.pipe';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     PipeDateComponent,
     PowerAndExponentComponent,
-    ExponentialStrengthPipe
+    ExponentialStrengthPipe,
+    LeaderPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

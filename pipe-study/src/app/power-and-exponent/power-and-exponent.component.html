@@ -1,4 +1,39 @@
 <div class="segment">
-  <h2>Power and Exponennt</h2>
+  <h2>Power and Exponent</h2>
   <p>2<sup>10</sup> = {{2| exponentialStrength:10}}</p>
+
+  <div class="field">
+    <label >Base Number</label>
+    <input #num1 (input)="onBaseChange(num1.value)" type="text" >  
+  </div>
+  <div class="field">
+    <label >Exponent Number</label>
+    <input #exponent (input)="onExponentChange(exponent.value)" type="text" >  
+  </div>
+
+  <p *ngIf="power">Result: {{base}}<sup>{{power}}</sup> : {{base|exponentialStrength:power}}</p>
+</div>
+<div class="segment">
+  <h2>Project Team Member</h2>
+  <div class="field">
+    <label >Member Name</label>
+    <input #name (keyup.enter)="addMember(name.value);name.value=''" type="text">
+  </div>
+  <div class="field">
+    <div class="checkbox">
+      <input type="checkbox" [(ngModel)]="leader">
+      <label >Leader</label>
+    </div>
+  </div>
+  <div >
+    <h3>Team Leaders</h3>
+    <div *ngFor="let hero of (members | leader)">
+      {{hero.name}}
+    </div>
+    <h3>All Team Member</h3>
+    <p *ngFor="let member of members">
+      {{member.name}}
+    </p>
+
+  </div>
 </div>

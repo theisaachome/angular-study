@@ -31,3 +31,39 @@
 .segment p {
   margin: 8px 0;
 }
+
+.field {
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+}
+.field label {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px 0;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.checkbox label {
+  color: grey;
+  font-size: 16px;
+  font-weight: 500;
+}
+input[type="checkbox"] {
+  margin: 0 6px 0 4px;
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid rgb(150, 227, 209);
+}
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px hotpink;
+}

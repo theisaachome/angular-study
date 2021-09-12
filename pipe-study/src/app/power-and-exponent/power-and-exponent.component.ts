@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Member, members } from "../member";
 
 @Component({
   selector: 'app-power-and-exponent',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PowerAndExponentComponent implements OnInit {
 
-  constructor() { }
+  members:Member[]=[];
+  base:number|any;
+  power:number|any;
+
+  leader:boolean=false;
+  constructor() { 
+    this.members=members
+  }
 
   ngOnInit(): void {
+  }
+
+  addMember(name:string){
+    
+    name=name.trim();
+    if(!name){return}
+    const member = {name:name,leader:this.leader};
+    this.members.push(member);
+  }
+  onBaseChange(value:any){
+    this.base=value;
+  }
+  onExponentChange(value:any){
+    this.power = value;
   }
 
 }
