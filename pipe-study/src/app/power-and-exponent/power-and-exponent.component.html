@@ -25,15 +25,20 @@
       <label >Leader</label>
     </div>
   </div>
-  <div >
-    <h3>Team Leaders</h3>
-    <div *ngFor="let hero of (members | leader)">
-      {{hero.name}}
+  <div class="teams">
+    <div class="list">
+      <h3 class="title">Team Leaders</h3>
+      <div class="item" *ngFor="let hero of (members | leader)">
+        {{hero.name}}
+      </div>
     </div>
-    <h3>All Team Member</h3>
-    <p *ngFor="let member of members">
-      {{member.name}}
-    </p>
+
+    <div class="list">
+      <h3  class="title">All Team Member</h3>
+      <p class="item" *ngFor="let member of members">
+        {{member.name}}
+      </p>
+    </div>
 
   </div>
 </div>
