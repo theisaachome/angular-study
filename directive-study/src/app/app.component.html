@@ -1,0 +1,22 @@
+
+<div class="container">
+  <h2>Angular Directive</h2>
+  <h3>There are 3 types of directives:</h3>
+  <ul *ngFor="let item of directives">
+    <li>{{item}}</li>
+  </ul>
+  <h4 [appTitle]="'#d0324c'">Component Directive</h4>
+  <highlight >Please add the background Color red.</highlight>
+  <div class="segment">
+    <h3>Structural Directives</h3>
+    <button class="btn" (click)="show=!show">{{show?'Hide ':'Show '}}Contact </button>
+    <div class="contact" *appIf="show">
+        <h3>Isaachome</h3>
+    </div>
+  </div>
+  <div class="segment">
+    <ul *appTime="5;let i=index">
+      <li> Apple {{i}}</li>
+    </ul>
+  </div>
+</div>
